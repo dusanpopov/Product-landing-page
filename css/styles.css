@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+.main-header{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+}
+
+.main-navbar__list{
+    justify-content: space-around;
+    list-style: none;
+}
+
+.main-navbar__link{
+    text-decoration: none;
+    padding: .8rem;
+    font-size: 1.8rem;
+}
+
+.logo, .main-navbar__list, .cart{
+    display: flex;
+}
+
+.logo{
+    flex: 1;
+    font-weight: 400;
+    margin: .8rem;
+}
+
+.main-navbar{
+    flex: 2;
+}
+
+.cart{
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+.presentation {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.introduction, .cover {
+    flex: 1;
+}
+
+.introduction__title{
+    font-size: 4.4rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #494964, #6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.introduction__paragraph{
+    margin-top: 2.2rem;
+    font-size: 2.6rem;
+    color: #585772;
+}
+.cta {
+    padding-top: 5rem;
+}
+
+.cta-select{
+    border: .2rem solid #c36cbb;
+    background: transparent;
+    color: #c36cbb;
+    width: 15rem;
+    height: 5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.cta-add{
+    border: none;
+    background: #c36cbb;
+    color: white;
+    width: 15rem;
+    height: 5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-left: .7rem;
+}
+.cover__image{
+    height: 60vh;
+    filter: drop-shadow(0 .5rem .3rem black);
+    animation: drop 1.5s ease;
+}
+
+.big-circle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+    opacity: 0.7;
+    height: 90%;
+}
+
+.medium-circle{
+    position: absolute;
+    top: 40%;
+    right: 30%;
+    z-index: -10;
+    height: 60%;
+    opacity: 0.4;
+}
+
+.small-circle{
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    opacity: 0.7;
+    z-index: -10;
+}
+
+@keyframes drop {
+
+    0%{
+        opacity: 0;
+        transform: translateY(-8rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    .presentation{
+        flex-direction: column;
+    }
+    .introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .introduction__title{
+        font-size: 3rem;
+    }
+    
+    .introduction__paragraph{
+        font-size: 1.8rem;
+    }
+
+    .cta{
+        padding-top: 1rem;
+    }
+
+    .small-circle, .medium-circle, .big-circle{
+        opacity: 0.2;
+    }
+
+    .main-navbar__link{
+        font-size: 1.6rem;
+    }
+}
